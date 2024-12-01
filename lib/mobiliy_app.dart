@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:mobilia/core/app/env_variables.dart';
 
 class MobiliaApp extends StatelessWidget {
   const MobiliaApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
       title: 'MOBILIA',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
