@@ -3,12 +3,18 @@ import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:mobilia/core/app/connectivity_controller.dart';
 import 'package:mobilia/core/app/env_variables.dart';
 import 'package:mobilia/mobiliy_app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  /// Add Splash_screen
+  FlutterNativeSplash.preserve(
+    widgetsBinding: WidgetsFlutterBinding.ensureInitialized(),
+  );
 
   /// تحقق من الإتصال بالشبكة
   await ConnectivityController.instance.init();
