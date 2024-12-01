@@ -3,18 +3,22 @@ import 'dart:io';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:mobilia/core/app/connectivity_controller.dart';
 import 'package:mobilia/core/app/env_variables.dart';
 import 'package:mobilia/mobiliy_app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // get envVariables
+  /// تحقق من الإتصال بالشبكة
+  await ConnectivityController.instance.init();
+
+  /// get envVariables
   await EnvVariables.instance.init(
     envType: EnvTypeEnum.dev,
   );
 
-  // أحيانا تحدث مشكلة إذا لم تكن هذه المفاتيح محددة في الأندرويد
+  /// أحيانا تحدث مشكلة إذا لم تكن هذه المفاتيح محددة في الأندرويد
   Platform.isAndroid
       ? await Firebase.initializeApp(
           options: const FirebaseOptions(
@@ -25,9 +29,12 @@ Future<void> main() async {
           ),
         )
       : await Firebase.initializeApp();
-  // To make Portrait
+
+  /// To make Portrait
   await SystemChrome.setPreferredOrientations(
     [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp],
   );
-  runApp(const MobiliaApp());
+  runApp(
+    const MobiliaApp(),
+  );
 }
