@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:mobilia/core/app/env_variables.dart';
 import 'package:mobilia/mobiliy_app.dart';
 
@@ -24,5 +25,9 @@ Future<void> main() async {
           ),
         )
       : await Firebase.initializeApp();
+  // To make Portrait
+  await SystemChrome.setPreferredOrientations(
+    [DeviceOrientation.portraitDown, DeviceOrientation.portraitUp],
+  );
   runApp(const MobiliaApp());
 }
