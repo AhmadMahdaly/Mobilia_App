@@ -33,6 +33,7 @@ flutter:
     - .env.prod
     - assets/svg/
     - assets/images/core/
+    - assets/images/Icon_App.png
 
   fonts:
     - family: Avenir Arabic
@@ -55,3 +56,9 @@ flutter:
         - asset: assets/fonts/Roboto/Roboto-Bold.ttf
           weight: 700
 
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/Icon_App.png"
+  adaptive_icon_background: "#7AC4A4"
+  adaptive_icon_foreground: "assets/images/Icon_App.png"
