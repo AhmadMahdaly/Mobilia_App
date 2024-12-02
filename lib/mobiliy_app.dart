@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobilia/core/app/connectivity_controller.dart';
 import 'package:mobilia/core/app/env_variables.dart';
 import 'package:mobilia/core/common/screens/no_network_screen.dart';
@@ -37,20 +38,24 @@ class _MobiliaAppState extends State<MobiliaApp> {
       valueListenable: ConnectivityController.instance.isConnected,
       builder: (_, value, __) {
         if (value) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
-            title: 'MoBilia',
-            builder: (context, widget) {
-              return Scaffold(
-                body: Builder(
-                  builder: (context) {
-                    ConnectivityController.instance.init();
-                    return widget!;
-                  },
-                ),
-              );
-            },
-            home: const Test(),
+          return ScreenUtilInit(
+            designSize: const Size(428, 926),
+            minTextAdapt: true,
+            child: MaterialApp(
+              debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
+              title: 'MoBilia',
+              builder: (context, widget) {
+                return Scaffold(
+                  body: Builder(
+                    builder: (context) {
+                      ConnectivityController.instance.init();
+                      return widget!;
+                    },
+                  ),
+                );
+              },
+              home: const Test(),
+            ),
           );
         } else {
           /// في حالة عدم وجود انترنت متصل
