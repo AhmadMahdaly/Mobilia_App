@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "817238951019",
+    "project_id": "mobilia-658c7",
+    "storage_bucket": "mobilia-658c7.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:817238951019:android:e4a35d1fb9568a0aa1dd2e",
+        "android_client_info": {
+          "package_name": "com.example.mobilia"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAY9GGwxEkw5k-tjaL8x5hK3ee7sNvJEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
