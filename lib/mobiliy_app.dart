@@ -4,7 +4,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobilia/core/app/connectivity_controller.dart';
 import 'package:mobilia/core/app/env_variables.dart';
 import 'package:mobilia/core/common/screens/no_network_screen.dart';
+import 'package:mobilia/core/extensions/context_extension.dart';
 import 'package:mobilia/core/routes/app_routes.dart';
+import 'package:mobilia/core/style/theme/app_theme.dart';
 import 'package:mobilia/test.dart';
 
 class MobiliaApp extends StatefulWidget {
@@ -43,6 +45,7 @@ class _MobiliaAppState extends State<MobiliaApp> {
             designSize: const Size(428, 926),
             minTextAdapt: true,
             child: MaterialApp(
+              theme: themeLight(),
               debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
               title: 'MoBilia',
 
