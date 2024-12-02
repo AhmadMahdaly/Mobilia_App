@@ -18,20 +18,16 @@ dependencies:
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.0.16
   flutter_native_splash: ^2.4.3
-
-
-
+  flutter_launcher_icons: ^0.14.1
+  icons_launcher: ^3.0.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
-  flutter_launcher_icons: ^0.14.1
 
-flutter_launcher_icons:
-  android: "launcher_icon"
-  image_path: "assets/icon/icon.png"
-  adaptive_icon_background: "#7AC4A4"
+
+
 
 flutter:
   uses-material-design: true
@@ -66,9 +62,9 @@ flutter:
           weight: 700
 
 flutter_native_splash:
-  color: "#42a5f5"
+  color: "#7AC4A4"
   image: assets/images/core/splash_screen/Splash_ icon.png
   android_12:
-    color: "#42a5f5"
+    color: "#7AC4A4"
     image: assets/images/core/splash_screen/Splash_ icon_12.png
 
