@@ -6,17 +6,17 @@ class CustomTTextField extends StatelessWidget {
   const CustomTTextField({
     required this.hintText,
     required this.icon,
-    required this.showCursor,
+    required this.obscureText,
     super.key,
   });
 
   final String hintText;
   final Icon icon;
-  final bool showCursor;
+  final bool obscureText;
   @override
   Widget build(BuildContext context) {
     return TextField(
-      showCursor: showCursor,
+      obscureText: obscureText,
       textDirection: TextDirection.rtl,
       cursorColor: context.color.borderColorLight,
       style: TextStyle(

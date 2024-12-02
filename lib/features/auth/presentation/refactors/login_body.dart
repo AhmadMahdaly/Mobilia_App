@@ -70,7 +70,7 @@ class LoginBody extends StatelessWidget {
                     Icons.mail_outline_rounded,
                     color: context.color.borderColorLight,
                   ),
-                  showCursor: false,
+                  obscureText: false,
                 ),
                 SizedBox(
                   height: 16.sp,
@@ -93,7 +93,7 @@ class LoginBody extends StatelessWidget {
                     Icons.mail_outline_rounded,
                     color: context.color.borderColorLight,
                   ),
-                  showCursor: true,
+                  obscureText: true,
                 ),
                 SizedBox(
                   height: 10.sp,
