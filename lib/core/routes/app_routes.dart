@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobilia/core/common/screens/page_under_build_screen.dart';
 import 'package:mobilia/core/routes/base_route.dart';
+import 'package:mobilia/features/auth/presentation/screens/login_screen.dart';
 import 'package:mobilia/test.dart';
 
 class AppRoutes {
@@ -8,7 +9,7 @@ class AppRoutes {
 
   /// مثال
   static const String testOne = 'TestOne';
-  static const String testTwo = 'TestOne';
+  static const String login = 'Login';
   //
   static Route<void> onGenerateRoute(RouteSettings settings) {
     ///نحتاجه لو اردنا تمرير داتا مع الروت
@@ -18,9 +19,9 @@ class AppRoutes {
         return BaseRoute(
           page: const Test(),
         );
-      case testTwo:
+      case login:
         return BaseRoute(
-          page: const Test(),
+          page: const LoginScreen(),
         );
       default:
         return BaseRoute(
