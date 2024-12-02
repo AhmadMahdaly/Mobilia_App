@@ -3,16 +3,17 @@ import 'package:mobilia/core/style/colors/colors_dark.dart';
 import 'package:mobilia/core/style/colors/colors_light.dart';
 
 class MyColors extends ThemeExtension<MyColors> {
-  const MyColors({
-    required this.mainColor,
-    required this.backgroungColor,
-    required this.titleColor,
-    required this.textColor,
-    required this.titleCategoryColor,
-    required this.fontGray1,
-    required this.fontGray2,
-    required this.fontGray3,
-  });
+  const MyColors(
+      {required this.mainColor,
+      required this.backgroungColor,
+      required this.titleColor,
+      required this.textColor,
+      required this.titleCategoryColor,
+      required this.fontGray1,
+      required this.fontGray2,
+      required this.fontGray3,
+      required this.borderColorLight,
+      required this.backgroundTitle});
 
   final Color? mainColor;
   final Color? backgroungColor;
@@ -22,18 +23,20 @@ class MyColors extends ThemeExtension<MyColors> {
   final Color? fontGray1;
   final Color? fontGray2;
   final Color? fontGray3;
+  final Color? borderColorLight;
+  final Color? backgroundTitle;
 
   @override
-  ThemeExtension<MyColors> copyWith({
-    Color? mainColor,
-    Color? backgroungColor,
-    Color? titleColor,
-    Color? titleCategoryColor,
-    Color? textColor,
-    Color? fontGray1,
-    Color? fontGray2,
-    Color? fontGray3,
-  }) {
+  ThemeExtension<MyColors> copyWith(
+      {Color? mainColor,
+      Color? backgroungColor,
+      Color? titleColor,
+      Color? titleCategoryColor,
+      Color? textColor,
+      Color? fontGray1,
+      Color? fontGray2,
+      Color? fontGray3,
+      Color? backgroundTitle}) {
     return MyColors(
       mainColor: mainColor,
       backgroungColor: backgroungColor,
@@ -43,6 +46,8 @@ class MyColors extends ThemeExtension<MyColors> {
       fontGray1: fontGray1,
       fontGray2: fontGray2,
       fontGray3: fontGray3,
+      borderColorLight: borderColorLight,
+      backgroundTitle: backgroundTitle,
     );
   }
 
@@ -63,6 +68,8 @@ class MyColors extends ThemeExtension<MyColors> {
       fontGray1: fontGray1,
       fontGray2: fontGray2,
       fontGray3: fontGray3,
+      borderColorLight: borderColorLight,
+      backgroundTitle: backgroundTitle,
     );
   }
 
@@ -75,6 +82,8 @@ class MyColors extends ThemeExtension<MyColors> {
     fontGray1: ColorsDark.fontGray1,
     fontGray2: ColorsDark.fontGray2,
     fontGray3: ColorsDark.fontGray3,
+    borderColorLight: ColorsDark.textColor,
+    backgroundTitle: ColorsDark.backgroundTitle,
   );
 
   static const MyColors light = MyColors(
@@ -86,5 +95,7 @@ class MyColors extends ThemeExtension<MyColors> {
     fontGray1: ColorsLight.fontGray1Light,
     fontGray2: ColorsLight.fontGray2Light,
     fontGray3: ColorsLight.fontGray3Light,
+    borderColorLight: ColorsLight.borderColorLight,
+    backgroundTitle: ColorsLight.backgroundTitle,
   );
 }

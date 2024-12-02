@@ -20,6 +20,7 @@ dependencies:
   flutter_native_splash: ^2.4.3
   flutter_launcher_icons: ^0.14.1
   icons_launcher: ^3.0.0
+  animate_do: ^3.3.4
 
 dev_dependencies:
   flutter_test:
@@ -39,27 +40,39 @@ flutter:
     - assets/images/core/
     - assets/icon/icon.png
     - assets/images/core/splash_screen/
+    - assets/images/core/category/
+    - assets/images/core/home page banner/
+    - assets/images/core/pages/
+    - assets/images/core/products/
+    - assets/images/core/sofa icon.png
+    - assets/icon/day-and-night.png
+    - assets/icon/globe.png
+
 
   fonts:
     - family: Avenir Arabic
       fonts:
-        - asset: assets/fonts/avenir-arabic/Avenir-Regular.otf
+        - asset: assets/fonts/avenir/Avenir-Regular.otf
           weight: 400
-        - asset: assets/fonts/avenir-arabic/Avenir-Medium.otf
+        - asset: assets/fonts/avenir/Avenir-Medium.otf
           weight: 500
-        - asset: assets/fonts/avenir-arabic/AvenirArabic-Black.otf
+        - asset: assets/fonts/avenir/AvenirArabic-Black.otf
           weight: 700
 
     - family: Roboto
       fonts:
-        - asset: assets/fonts/Roboto/Roboto-Light.ttf
+        - asset: assets/fonts/roboto/Roboto-Light.ttf
           weight: 200
-        - asset: assets/fonts/Roboto/Roboto-Regular.ttf
+        - asset: assets/fonts/roboto/Roboto-Regular.ttf
           weight: 400
-        - asset: assets/fonts/Roboto/Roboto-Medium.ttf
+        - asset: assets/fonts/roboto/Roboto-Medium.ttf
           weight: 500
-        - asset: assets/fonts/Roboto/Roboto-Bold.ttf
+        - asset: assets/fonts/roboto/Roboto-Bold.ttf
           weight: 700
+    - family: Italiana
+      fonts:
+        - asset: assets/fonts/italiana/Italiana-Regular.ttf
+          weight: 500
 
 flutter_native_splash:
   color: "#7AC4A4"

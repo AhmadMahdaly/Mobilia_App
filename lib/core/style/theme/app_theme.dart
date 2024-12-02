@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mobilia/core/style/colors/colors_dark.dart';
 import 'package:mobilia/core/style/colors/colors_light.dart';
+import 'package:mobilia/core/style/fonts/font_family_helper.dart';
 import 'package:mobilia/core/style/theme/color_extension.dart';
 
 ThemeData themeDark() {
@@ -11,11 +12,11 @@ ThemeData themeDark() {
       //  MyAssets.dark,
     ],
     useMaterial3: true,
-    textTheme: const TextTheme(
+    textTheme: TextTheme(
       displaySmall: TextStyle(
         fontSize: 14,
         color: ColorsDark.textColor,
-        // fontFamily: FontFamilyHelper.geLocalozedFontFamily(),
+        fontFamily: FontFamilyHelper.getLocalizationFontFamily(),
       ),
     ),
   );
@@ -29,11 +30,11 @@ ThemeData themeLight() {
       //  MyAssets.light
     ],
     useMaterial3: true,
-    textTheme: const TextTheme(
+    textTheme: TextTheme(
       displaySmall: TextStyle(
         fontSize: 14,
-        // color: ColorsLight.black,
-        // fontFamily: FontFamilyHelper.geLocalozedFontFamily(),
+        color: ColorsLight.textColorLight,
+        fontFamily: FontFamilyHelper.getLocalizationFontFamily(),
       ),
     ),
   );
