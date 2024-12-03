@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 class ColorsDark {
   const ColorsDark._();
-  static const Color backgroungColor = Color(0xFF253A27);
-  static const Color titleColor = Color(0xFF3A3A3A);
-  static const Color titleCategoryColor = Color(0xFF9DB2CE);
-  static const Color mainColor = Color(0xFF7EC6A7);
-  static const Color textColor = Color(0xFFE4E4E2);
-  static const Color fontGray1 = Color(0xFFFAF9F4);
-  static const Color fontGray2 = Color(0xFFF5F5EB);
-  static const Color fontGray3 = Color(0xFFF1EFE2);
-  static const Color backgroundTitle = Color(0xFF212C1F);
+  static const Color backgroungColorDark = Color(0xFF253A27);
+  static const Color buttonBackgroungColorDark = Color(0xFF212C1F);
+  static const Color buttonTextColorDark = Color(0xFFffffff);
+  static const Color titleColorDark = Color(0xFFE4E4E2);
+  static const Color titleCategoryColorDark = Color(0xFF9DB2CE);
+  static const Color mainColorDark = Color(0xFF7EC6A7);
+
+  static const Color headColorDark = Color(0xFF89898a);
+  static const Color hintColorDark = Color(0xFFc4c4c4);
+  static const Color borderInActiveColorDark = Color(0xFFe6e6e6);
+  static const Color borderActiveColorDark = Color(0xFF89898a);
 }

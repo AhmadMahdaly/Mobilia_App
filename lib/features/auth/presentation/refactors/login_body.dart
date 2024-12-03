@@ -31,7 +31,7 @@ class LoginBody extends StatelessWidget {
                   child: Text(
                     'MOBILIA.',
                     style: TextStyle(
-                      color: context.color.fontGray3,
+                      color: context.color.titleColor,
                       fontSize: 40.sp,
                       fontFamily: 'Italiana',
                     ),
@@ -55,7 +55,7 @@ class LoginBody extends StatelessWidget {
                 Text(
                   'البريد الإلكتروني',
                   style: TextStyle(
-                    color: context.color.fontGray1,
+                    color: context.color.headColor,
                     fontSize: 16.sp,
                     fontFamily: 'Avenir Arabic',
                     fontWeight: FontWeight.w500,
@@ -68,7 +68,7 @@ class LoginBody extends StatelessWidget {
                   hintText: 'البريد الالكتروني',
                   icon: Icon(
                     Icons.mail_outline_rounded,
-                    color: context.color.borderColorLight,
+                    color: context.color.hintColor,
                   ),
                   obscureText: false,
                 ),
@@ -78,7 +78,7 @@ class LoginBody extends StatelessWidget {
                 Text(
                   'كلمة المرور',
                   style: TextStyle(
-                    color: context.color.fontGray1,
+                    color: context.color.headColor,
                     fontSize: 16.sp,
                     fontFamily: 'Avenir Arabic',
                     fontWeight: FontWeight.w500,
@@ -91,7 +91,7 @@ class LoginBody extends StatelessWidget {
                   hintText: 'كلمة المرور',
                   icon: Icon(
                     Icons.mail_outline_rounded,
-                    color: context.color.borderColorLight,
+                    color: context.color.hintColor,
                   ),
                   obscureText: true,
                 ),
@@ -130,7 +130,7 @@ class LoginBody extends StatelessWidget {
                         TextSpan(
                           text: 'ليس لديك حساب؟',
                           style: TextStyle(
-                            color: context.color.fontGray1,
+                            color: context.color.headColor,
                             fontSize: 16.sp,
                             fontFamily: 'Avenir Arabic',
                             fontWeight: FontWeight.w500,
