@@ -42,11 +42,11 @@ class CustomTextField extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextFormField(
       controller: controller,
-      cursorColor: context.color.textColor,
+      cursorColor: context.color.mainColor,
       style: TextStyle(
         fontSize: 16.sp,
         fontWeight: FontWeight.w500,
-        color: context.color.textColor,
+        color: context.color.hintColor,
       ),
       validator: (value) {
         return validator!(value);
@@ -62,11 +62,11 @@ class CustomTextField extends StatelessWidget {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(color: context.color.textColor!),
+          borderSide: BorderSide(color: context.color.borderActiveColor!),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(color: context.color.textColor!),
+          borderSide: BorderSide(color: context.color.borderInActiveColor!),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
@@ -85,7 +85,7 @@ class CustomTextField extends StatelessWidget {
         hintText: hintText,
         hintStyle: hintStyle ??
             context.textStyle.copyWith(
-              color: context.color.textColor,
+              color: context.color.headColor,
               fontWeight: FontWeight.w400,
               fontSize: 14.sp,
             ),

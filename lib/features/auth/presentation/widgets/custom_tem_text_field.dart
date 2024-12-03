@@ -18,11 +18,11 @@ class CustomTTextField extends StatelessWidget {
     return TextField(
       obscureText: obscureText,
       textDirection: TextDirection.rtl,
-      cursorColor: context.color.borderColorLight,
+      cursorColor: context.color.mainColor,
       style: TextStyle(
         fontSize: 16.sp,
         fontWeight: FontWeight.w500,
-        color: context.color.borderColorLight,
+        color: context.color.hintColor,
       ),
       decoration: InputDecoration(
         border: OutlineInputBorder(
@@ -30,31 +30,42 @@ class CustomTTextField extends StatelessWidget {
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(color: context.color.borderColorLight!),
+          borderSide: BorderSide(
+            color: context.color.hintColor!,
+          ),
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: BorderSide(color: context.color.borderColorLight!),
+          borderSide: BorderSide(
+            color: context.color.mainColor!,
+            width: 2,
+          ),
         ),
         errorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: const BorderSide(color: Colors.red),
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 2,
+          ),
         ),
         focusedErrorBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(15),
-          borderSide: const BorderSide(color: Colors.red),
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 2,
+          ),
         ),
         contentPadding: const EdgeInsets.symmetric(
           horizontal: 20,
           vertical: 16,
         ),
 
-        fillColor: context.color.textColor,
+        fillColor: context.color.hintColor,
         suffixIcon: icon,
         // prefixIcon:
         hintText: hintText,
         hintStyle: context.textStyle.copyWith(
-          color: context.color.borderColorLight,
+          color: context.color.hintColor,
           fontWeight: FontWeight.w400,
           fontSize: 14.sp,
         ),

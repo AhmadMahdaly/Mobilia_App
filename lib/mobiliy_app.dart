@@ -45,7 +45,7 @@ class _MobiliaAppState extends State<MobiliaApp> {
             minTextAdapt: true,
             child: MaterialApp(
               theme: themeDark(),
-              locale: const Locale('ar'),
+              // locale: const Locale('ar'),
 
               debugShowCheckedModeBanner: EnvVariables.instance.debugMode,
               title: 'MOBILIA',

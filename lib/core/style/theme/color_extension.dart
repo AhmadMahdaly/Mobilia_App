@@ -3,51 +3,55 @@ import 'package:mobilia/core/style/colors/colors_dark.dart';
 import 'package:mobilia/core/style/colors/colors_light.dart';
 
 class MyColors extends ThemeExtension<MyColors> {
-  const MyColors(
-      {required this.mainColor,
-      required this.backgroungColor,
-      required this.titleColor,
-      required this.textColor,
-      required this.titleCategoryColor,
-      required this.fontGray1,
-      required this.fontGray2,
-      required this.fontGray3,
-      required this.borderColorLight,
-      required this.backgroundTitle});
+  const MyColors({
+    required this.mainColor,
+    required this.backgroungColor,
+    required this.buttonBackgroungColor,
+    required this.buttonTextColor,
+    required this.titleColor,
+    required this.titleCategoryColor,
+    required this.headColor,
+    required this.hintColor,
+    required this.borderInActiveColor,
+    required this.borderActiveColor,
+  });
 
   final Color? mainColor;
   final Color? backgroungColor;
+  final Color? buttonBackgroungColor;
+  final Color? buttonTextColor;
   final Color? titleColor;
   final Color? titleCategoryColor;
-  final Color? textColor;
-  final Color? fontGray1;
-  final Color? fontGray2;
-  final Color? fontGray3;
-  final Color? borderColorLight;
-  final Color? backgroundTitle;
+  final Color? headColor;
+  final Color? hintColor;
+
+  final Color? borderInActiveColor;
+  final Color? borderActiveColor;
 
   @override
-  ThemeExtension<MyColors> copyWith(
-      {Color? mainColor,
-      Color? backgroungColor,
-      Color? titleColor,
-      Color? titleCategoryColor,
-      Color? textColor,
-      Color? fontGray1,
-      Color? fontGray2,
-      Color? fontGray3,
-      Color? backgroundTitle}) {
+  ThemeExtension<MyColors> copyWith({
+    Color? mainColor,
+    Color? backgroungColor,
+    Color? buttonBackgroungColor,
+    Color? buttonTextColor,
+    Color? titleColor,
+    Color? titleCategoryColor,
+    Color? headColor,
+    Color? hintColor,
+    Color? borderInActiveColor,
+    Color? borderActiveColor,
+  }) {
     return MyColors(
       mainColor: mainColor,
       backgroungColor: backgroungColor,
+      buttonBackgroungColor: buttonBackgroungColor,
+      buttonTextColor: buttonTextColor,
       titleColor: titleColor,
-      textColor: textColor,
       titleCategoryColor: titleCategoryColor,
-      fontGray1: fontGray1,
-      fontGray2: fontGray2,
-      fontGray3: fontGray3,
-      borderColorLight: borderColorLight,
-      backgroundTitle: backgroundTitle,
+      headColor: headColor,
+      hintColor: hintColor,
+      borderInActiveColor: borderInActiveColor,
+      borderActiveColor: borderActiveColor,
     );
   }
 
@@ -62,40 +66,40 @@ class MyColors extends ThemeExtension<MyColors> {
     return MyColors(
       mainColor: mainColor,
       backgroungColor: backgroungColor,
+      buttonBackgroungColor: buttonBackgroungColor,
+      buttonTextColor: buttonTextColor,
       titleColor: titleColor,
-      textColor: textColor,
       titleCategoryColor: titleCategoryColor,
-      fontGray1: fontGray1,
-      fontGray2: fontGray2,
-      fontGray3: fontGray3,
-      borderColorLight: borderColorLight,
-      backgroundTitle: backgroundTitle,
+      headColor: headColor,
+      hintColor: hintColor,
+      borderInActiveColor: borderInActiveColor,
+      borderActiveColor: borderActiveColor,
     );
   }
 
   static const MyColors dark = MyColors(
-    mainColor: ColorsDark.mainColor,
-    backgroungColor: ColorsDark.backgroungColor,
-    titleColor: ColorsDark.titleColor,
-    textColor: ColorsDark.textColor,
-    titleCategoryColor: ColorsDark.titleCategoryColor,
-    fontGray1: ColorsDark.fontGray1,
-    fontGray2: ColorsDark.fontGray2,
-    fontGray3: ColorsDark.fontGray3,
-    borderColorLight: ColorsDark.textColor,
-    backgroundTitle: ColorsDark.backgroundTitle,
+    mainColor: ColorsDark.mainColorDark,
+    backgroungColor: ColorsDark.backgroungColorDark,
+    buttonBackgroungColor: ColorsDark.buttonBackgroungColorDark,
+    buttonTextColor: ColorsDark.buttonTextColorDark,
+    titleColor: ColorsDark.titleColorDark,
+    titleCategoryColor: ColorsDark.titleCategoryColorDark,
+    headColor: ColorsDark.headColorDark,
+    hintColor: ColorsDark.hintColorDark,
+    borderInActiveColor: ColorsDark.borderInActiveColorDark,
+    borderActiveColor: ColorsDark.borderActiveColorDark,
   );
 
   static const MyColors light = MyColors(
     mainColor: ColorsLight.mainColorLight,
     backgroungColor: ColorsLight.backgroungColorLight,
+    buttonBackgroungColor: ColorsLight.buttonBackgroungColorLight,
+    buttonTextColor: ColorsLight.buttonTextColorLight,
     titleColor: ColorsLight.titleColorLight,
-    textColor: ColorsLight.textColorLight,
     titleCategoryColor: ColorsLight.titleCategoryColorLight,
-    fontGray1: ColorsLight.fontGray1Light,
-    fontGray2: ColorsLight.fontGray2Light,
-    fontGray3: ColorsLight.fontGray3Light,
-    borderColorLight: ColorsLight.borderColorLight,
-    backgroundTitle: ColorsLight.backgroundTitle,
+    headColor: ColorsLight.headColorLight,
+    hintColor: ColorsLight.hintColorLight,
+    borderInActiveColor: ColorsLight.borderInActiveColorLight,
+    borderActiveColor: ColorsLight.borderActiveColorLight,
   );
 }

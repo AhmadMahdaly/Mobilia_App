@@ -6,7 +6,7 @@ import 'package:mobilia/core/style/theme/color_extension.dart';
 
 ThemeData themeDark() {
   return ThemeData(
-    scaffoldBackgroundColor: ColorsDark.backgroungColor,
+    scaffoldBackgroundColor: ColorsDark.backgroungColorDark,
     extensions: const <ThemeExtension<dynamic>>[
       MyColors.dark,
       //  MyAssets.dark,
@@ -15,7 +15,7 @@ ThemeData themeDark() {
     textTheme: TextTheme(
       displaySmall: TextStyle(
         fontSize: 14,
-        color: ColorsDark.textColor,
+        color: ColorsDark.backgroungColorDark,
         fontFamily: FontFamilyHelper.getLocalizationFontFamily(),
       ),
     ),
@@ -33,7 +33,7 @@ ThemeData themeLight() {
     textTheme: TextTheme(
       displaySmall: TextStyle(
         fontSize: 14,
-        color: ColorsLight.textColorLight,
+        color: ColorsLight.backgroungColorLight,
         fontFamily: FontFamilyHelper.getLocalizationFontFamily(),
       ),
     ),
