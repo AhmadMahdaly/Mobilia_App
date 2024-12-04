@@ -7,6 +7,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:mobilia/core/app/bloc_observer.dart';
 import 'package:mobilia/core/app/connectivity_controller.dart';
+import 'package:mobilia/core/app/di/injection_container.dart';
 import 'package:mobilia/core/app/env_variables.dart';
 import 'package:mobilia/core/service/shared_preferances/shared_pref.dart';
 import 'package:mobilia/mobiliy_app.dart';
@@ -41,6 +42,9 @@ Future<void> main() async {
 
   /// BloC observer
   Bloc.observer = AppBlocObserver();
+
+  /// Injector
+  await setupInjector();
 
   /// Shared Pref
   await SharedPref().instantiatePreferences();
