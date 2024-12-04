@@ -5,7 +5,6 @@ import 'package:mobilia/core/common/widgets/custom_text_field.dart';
 import 'package:mobilia/core/extensions/context_extension.dart';
 import 'package:mobilia/core/style/fonts/font_weight_helper.dart';
 import 'package:mobilia/core/utils/app_regex.dart';
-import 'package:mobilia/features/auth/presentation/widgets/custom_tem_text_field.dart';
 
 class SignUpTextForm extends StatefulWidget {
   const SignUpTextForm({super.key});
