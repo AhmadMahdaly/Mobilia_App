@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobilia/core/common/animation/animation_do.dart';
-import 'package:mobilia/core/common/widgets/custom_button.dart';
 import 'package:mobilia/core/extensions/context_extension.dart';
 import 'package:mobilia/core/routes/app_routes.dart';
 import 'package:mobilia/features/auth/presentation/widgets/custom_tem_text_field.dart';
 import 'package:mobilia/features/auth/presentation/widgets/dark_and_lang_botton.dart';
+import 'package:mobilia/features/auth/presentation/widgets/login/login_button.dart';
+import 'package:mobilia/features/auth/presentation/widgets/login/login_text_form.dart';
 
 class LoginBody extends StatelessWidget {
   const LoginBody({super.key});
@@ -25,10 +26,13 @@ class LoginBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const DarkAndLangBotton(),
+                ///DarkMode & Lang Button
+                const DarkAndLangButton(),
                 SizedBox(
                   height: 40.sp,
                 ),
+
+                /// Page Title
                 Center(
                   child: Text(
                     'MOBILIA.',
@@ -42,6 +46,8 @@ class LoginBody extends StatelessWidget {
                 SizedBox(
                   height: 50.sp,
                 ),
+
+                /// Head Title
                 CustomFadeInRight(
                   duration: 500,
                   child: Text(
@@ -57,64 +63,11 @@ class LoginBody extends StatelessWidget {
                 SizedBox(
                   height: 30.sp,
                 ),
-                CustomFadeInRight(
-                  duration: 450,
-                  child: Text(
-                    'البريد الإلكتروني',
-                    style: TextStyle(
-                      color: context.color.headColor,
-                      fontSize: 16.sp,
-                      fontFamily: 'Avenir Arabic',
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10.sp,
-                ),
-                CustomFadeInLeft(
-                  duration: 500,
-                  child: CustomTTextField(
-                    hintText: 'البريد الالكتروني',
-                    icon: Icon(
-                      Icons.mail_outline_rounded,
-                      color: context.color.hintColor,
-                    ),
-                    obscureText: false,
-                  ),
-                ),
-                SizedBox(
-                  height: 16.sp,
-                ),
-                CustomFadeInRight(
-                  duration: 450,
-                  child: Text(
-                    'كلمة المرور',
-                    style: TextStyle(
-                      color: context.color.headColor,
-                      fontSize: 16.sp,
-                      fontFamily: 'Avenir Arabic',
-                      fontWeight: FontWeight.w500,
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10.sp,
-                ),
-                CustomFadeInLeft(
-                  duration: 500,
-                  child: CustomTTextField(
-                    hintText: 'كلمة المرور',
-                    icon: Icon(
-                      Icons.mail_outline_rounded,
-                      color: context.color.hintColor,
-                    ),
-                    obscureText: true,
-                  ),
-                ),
-                SizedBox(
-                  height: 10.sp,
-                ),
+
+                /// Email & Password
+                const LoginTextForm(),
+
+                /// Password Forgetten
                 Align(
                   alignment: Alignment.centerLeft,
                   child: CustomFadeInUp(
@@ -133,19 +86,14 @@ class LoginBody extends StatelessWidget {
                 SizedBox(
                   height: 42.sp,
                 ),
-                CustomFadeInUp(
-                  duration: 500,
-                  child: CustomButton(
-                    onPressed: () {},
-                    text: 'تسجيل الدخول',
-                    width: double.infinity,
-                    height: 56.sp,
-                    backgroundColor: context.color.mainColor,
-                  ),
-                ),
+
+                /// SignIn Button
+                const LoginButton(),
                 SizedBox(
                   height: 10.sp,
                 ),
+
+                /// SignUp route
                 Align(
                   child: CustomFadeInUp(
                     duration: 500,

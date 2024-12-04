@@ -3,8 +3,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:mobilia/core/common/animation/animation_do.dart';
 import 'package:mobilia/core/extensions/context_extension.dart';
 
-class DarkAndLangBotton extends StatelessWidget {
-  const DarkAndLangBotton({super.key});
+class DarkAndLangButton extends StatelessWidget {
+  const DarkAndLangButton({super.key});
 
   @override
   Widget build(BuildContext context) {
