@@ -22,6 +22,7 @@ dependencies:
   icons_launcher: ^3.0.0
   animate_do: ^3.3.4
   flutter_localization: ^0.2.2
+  flutter_bloc: ^8.1.6
 
 dev_dependencies:
   flutter_test:
